@@ -69,15 +69,8 @@ st.set_page_config(
 
 st.markdown("""
 <div style="background:#1a1a2e; border-radius:12px; padding:18px 32px; margin-bottom:1.5rem;
-            display:flex; align-items:center; gap:18px;">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 60" width="220" height="42">
-        <text x="0" y="46" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
-              font-size="52" font-weight="800" fill="#079DD9" letter-spacing="-1">b</text>
-        <text x="30" y="46" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
-              font-size="52" font-weight="300" fill="#ffffff" letter-spacing="-1">Strong</text>
-    </svg>
-    <span style="color:rgba(255,255,255,0.5); font-size:0.75rem; margin-left:auto;
-                 letter-spacing:0.05em; text-transform:uppercase;">
+            display:flex; align-items:center; justify-content:center;">
+    <span style="color:#ffffff; font-size:1.4rem; font-weight:700; letter-spacing:0.02em;">
         Studio Feasibility Calculator
     </span>
 </div>
