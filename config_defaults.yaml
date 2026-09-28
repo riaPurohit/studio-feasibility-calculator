@@ -1,0 +1,107 @@
+# ──────────────────────────────────────────────
+# Studio Feasibility Calculator – Default Config
+# ──────────────────────────────────────────────
+
+# ── Membership ramp ──────────────────────────
+ramp:
+  starting_members: 30
+  monthly_net_adds_base: 15
+  months_to_maturity: 12
+  default_churn_pct: 5.0
+
+# ── Revenue ─────────────────────────────────
+revenue:
+  default_arpm: 359.40
+  arpm_year2: null           # null = same as year 1
+  add_ons_enabled: false
+  add_on_revenue_per_member: 25
+
+# ── Fixed Costs (monthly) ──────────────────
+fixed_costs:
+  rent: 0                    # 0 = auto-estimate from location
+  manager_wages: 4000
+  manager_payroll_taxes: 480
+  owner_wages: 0
+  owner_payroll_taxes: 0
+  professional_fees: 300
+  insurance: 800
+  accountable_plan_reimb: 0
+  repairs_maintenance: 400
+  computer_internet: 150
+  telephone: 100
+  gym_music: 50
+  gym_supplies: 200
+  office_expenses: 100
+  client_processing_software: 500
+  small_equipment: 100
+  automobile_expense: 0
+  security_fee: 75
+  dues_subscriptions: 100
+  bank_service_charges: 50
+  licenses_permits: 50
+  business_taxes: 0
+  marketing: 3000
+
+# ── Variable Costs ──────────────────────────
+variable_costs:
+  trainer_hourly_rate: 35
+  classes_per_week: 30
+  trainer_payroll_tax_pct: 12.0
+  processing_fee_pct: 2.9    # CC / Firstach processing
+
+# ── Rent estimation (when rent = 0) ─────────
+rent:
+  default_rate_per_sqft_annual: 30
+  cam_pct: 15.0
+
+# ── Startup / CapEx ─────────────────────────
+startup:
+  default_capex: 150000
+  opening_costs: 15000
+
+# ── Taxes ───────────────────────────────────
+taxes:
+  ignore_taxes: true
+  effective_tax_rate: 25.0
+
+# ── Scenario multipliers ────────────────────
+scenarios:
+  downside:
+    member_factor: 0.75
+    arpm_factor: 0.90
+    churn_add: 2.0
+    cost_factor: 1.10
+  base:
+    member_factor: 1.0
+    arpm_factor: 1.0
+    churn_add: 0.0
+    cost_factor: 1.0
+  upside:
+    member_factor: 1.20
+    arpm_factor: 1.05
+    churn_add: -1.0
+    cost_factor: 0.95
+
+# ── Go / No-Go thresholds ──────────────────
+thresholds:
+  payback_green: 18
+  payback_yellow: 24
+  breakeven_month_green: 10
+  breakeven_month_yellow: 16
+  roi_1y_green: 15.0
+  roi_1y_yellow: 0.0
+
+# ── Market research ─────────────────────────
+market_research:
+  search_radius_miles: 5
+  competition_keywords:
+    - fitness studio
+    - Pilates
+    - HIIT
+    - boutique fitness
+    - cycling studio
+    - yoga studio
+  mode: no_key
+  api_keys:
+    google_places: ""
+    census: ""
